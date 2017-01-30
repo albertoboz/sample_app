@@ -26,12 +26,15 @@ html, body {
 #skill-list {
   padding: 10px 10px;
   list-style: circle;
+  text-align: center;
 }
 #skill-list li {
   list-style: circle;
   font-size: 1.1em;
 }
-
+#skills h3 {
+  margin-bottom: 10px;
+}
 // FOOTER
 .page-wrap {
   min-height: 100%;
