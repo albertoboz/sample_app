@@ -22,19 +22,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index">Bike Berlin</a>
+          <%= link_to 'Bike Berlin', root_path, class: 'navbar-brand' %>
         </div><!-- Collect the nav links, forms, and other content for toggling -->
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right link-style">
             <li>
-              <a href="static_pages/index">Home</a>
+              <%= link_to 'Home', root_path %>
             </li>
             <li>
-              <a href="static_pages/about">About</a>
+              <%= link_to 'About', static_pages_about_path %>
             </li>
             <li>
-              <a href="static_pages/contact">Contact</a>
+              <%= link_to 'Contact', static_pages_contact_path %>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
