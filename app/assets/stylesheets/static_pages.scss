@@ -25,11 +25,10 @@ html, body {
 // ABOUT PAGE
 #skill-list {
   padding: 10px 10px;
-  list-style: circle;
   text-align: center;
 }
 #skill-list li {
-  list-style: circle;
+  list-style: none;
   font-size: 1.1em;
 }
 #skills h3 {
