@@ -1,8 +1,11 @@
+.col-centered{
+  margin: auto;
+  float: none;
+}
 .tab-style {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.1em;
-  margin: auto;
   background-color: #E5E5E5;
 }
 .tab-style th {
@@ -103,4 +106,15 @@
   background-color: #FFF;
   transition: color, background-color 600ms;
   -webkit-transition: color, background-color 600ms;
+}
+
+// SHOW PAGE
+.show {
+  width: 300px;
+  margin: auto;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.show-product p {
+  font-size: 1.1em;
 }
