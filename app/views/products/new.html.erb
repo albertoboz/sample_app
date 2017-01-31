@@ -1,5 +1,11 @@
-<h1>New Product</h1>
-
-<%= render 'form', product: @product %>
-
-<%= link_to 'Back', products_path %>
+<header>
+  <h1>New Product</h1>
+</header>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-6" id="product-form">
+    <%= render 'form', product: @product %>
+  </div>
+</div>
+<div id="product-links">
+  <%= link_to 'Back', products_path %>
+</div>

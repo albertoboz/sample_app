@@ -2,7 +2,8 @@
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.1em;
-  margin: 10px;
+  margin: auto;
+  background-color: #E5E5E5;
 }
 .tab-style th {
   padding: 5px;
@@ -10,21 +11,96 @@
 .tab-style td {
   padding: 5px;
 }
-.new-product {
+.create-product {
   padding-top: 40px;
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.1em;
   text-align: center;
 }
-.new-product a {
+.create-product a {
   padding: 5px;
 }
-.new-product a:hover {
+.create-product a:hover {
   color: #111;
   font-size: 1.2em;
   text-decoration: none;
-  background-color: #f2d18a;
+  background-color: #FFF;
+  transition: color, background-color 600ms;
+  -webkit-transition: color, background-color 600ms;
+}
+
+// PRODUCT FORM
+#product-form {
+  text-align: center;
+  width: 100%;
+  color: #888;
+}
+#product-form form {
+  background: #E5E5E5;
+  display: inline-block;
+  margin: auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+.actions input {
+  background: #E27575;
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;
+}
+.actions input:hover {
+  background: #CF7A7A
+}
+.field input {
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 100%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.field textarea {
+  border: 1px solid #DADADA;
+  color: #888;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 100%;
+  min-width: 250px;
+  line-height:25px;
+  font-size: 12px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+#product-links {
+  text-align: center;
+  margin: 5px;
+}
+#product-links a {
+  font-size: 1.1em;
+  padding: 5px;
+}
+#product-links a:hover {
+  color: #111;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: #FFF;
   transition: color, background-color 600ms;
   -webkit-transition: color, background-color 600ms;
 }
