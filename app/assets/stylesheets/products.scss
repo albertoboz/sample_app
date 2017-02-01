@@ -1,6 +1,10 @@
+// INDEX PAGE
 .col-centered{
   margin: auto;
   float: none;
+  background-color: #E5E5E5;
+  padding: 30px;
+  border-radius: 5px;
 }
 .tab-style {
   color: #111;
@@ -110,11 +114,16 @@
 
 // SHOW PAGE
 .show {
-  width: 300px;
+  max-width: 400px;
   margin: auto;
   padding-left: 40px;
   padding-top: 40px;
 }
 .show-product p {
   font-size: 1.1em;
+}
+.show-product {
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  padding: 30px;
 }
