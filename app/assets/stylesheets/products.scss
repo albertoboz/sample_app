@@ -1,22 +1,27 @@
 // INDEX PAGE
-.col-centered{
+.tab-center {
   margin: auto;
-  float: none;
-  background-color: #E5E5E5;
-  padding: 30px;
-  border-radius: 5px;
+  max-width: 500px;
 }
 .tab-style {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.1em;
   background-color: #E5E5E5;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .tab-style th {
-  padding: 5px;
+  padding: 20px;
 }
 .tab-style td {
-  padding: 5px;
+  padding: 20px;
+  // line break
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
 }
 .create-product {
   padding-top: 40px;
@@ -116,11 +121,15 @@
 .show {
   max-width: 400px;
   margin: auto;
-  padding-left: 40px;
   padding-top: 40px;
 }
 .show-product p {
   font-size: 1.1em;
+  // line brak
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
 }
 .show-product {
   background-color: #E5E5E5;
