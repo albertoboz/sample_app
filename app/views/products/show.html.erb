@@ -1,5 +1,9 @@
 <div class="show">
-  <div class="show-product">
+  <div class="display-product">
+    <p>
+      <%= image_tag(@product.image_url, class: "img-responsive product-img") %>
+    </p>
+
     <p>
       <strong>Name:</strong>
       <%= @product.name %>
@@ -11,11 +15,11 @@
     </p>
 
     <p>
-      <strong>Image url:</strong>
-      <%= @product.image_url %>
+      <strong>Colour:</strong>
+      <%= @product.colour %>
     </p>
   </div>
-  <div id="product-links">
+  <div class="product-links">
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
   </div>
