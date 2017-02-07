@@ -1,9 +1,9 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <% @products.each_with_index do |product, i| %>
+      <li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="<%= " active" if product == @products.first %>"></li>
+    <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -27,21 +27,4 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
-<header>
-<div class="show-all-products"><h2>Available Bikes</h2></div>
-</header>
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-xs-4 col-sm-2 col-md-2">
-      <div class="display-product">
-        <%= image_tag(product.image_url, class: "img-responsive product-img") %>
-        <div class="product-description">
-          <p class="product-name"><%= product.name %></p>
-        </div>
-        <hr class="divider">
-        <p class="product-price">Price: <%= product.price %> &euro;</p>
-      </div>
-    </div> <!-- /col -->
-  <% end %>
 </div>
