@@ -97,6 +97,27 @@ html, body {
   text-align: left;
 }
 
+// CAROUSEL
+.product-carousel-name {
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  text-shadow: 2px 2px 2px #494747;
+}
+.carousel-control:hover {
+  background: none;
+}
+.carousel {
+  max-width: 60%;
+  margin: auto;
+}
+
+.show-all-products {
+  padding-top: 40px;
+  text-align: center;
+}
 // TYPOGRAPHY
 h1 {
   color: #625F5F;
