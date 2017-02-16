@@ -158,3 +158,40 @@ header {
   padding-bottom: 10px;
   font-size: 1.1em;
 }
+
+.alert {
+  color: #FFF;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  background-color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.search-form {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.search-button {
+  border-radius: 4px;
+  background-color: #696666;
+  color: #E5E5E5;
+  border: none;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 5px #484848;
+  cursor: pointer;
+}
+.search-field{
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  color: #888;
+  height: 30px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  font-size: 12px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}

@@ -4,7 +4,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    # return filtered products
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+      if @products.blank?
+        flash[:alert] = 'There are no results that match your search'
+      end
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1

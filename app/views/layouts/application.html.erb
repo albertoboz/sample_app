@@ -28,11 +28,18 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right link-style">
+            <li class="search-form">
+              <%= form_tag("/products", method: "get") do %>
+                <!-- <%= label_tag(:q, "Search for:") %> -->
+                <%= text_field_tag(:q, nil, :placeholder => 'Search for a product', class: 'search-field') %>
+                <%= submit_tag("Search", class: 'search-button') %>
+              <% end %>
+            </li>
             <li>
               <%= link_to 'Home', root_path %>
             </li>
             <li>
-              <%= link_to 'Products', products_path %>
+              <%= link_to 'Shop', products_path %>
             </li>
             <li>
               <%= link_to 'About', static_pages_about_path %>
