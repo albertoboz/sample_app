@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user_mailer/contact_form'
+
   get 'static_pages/thank_you'
 
   resources :products
