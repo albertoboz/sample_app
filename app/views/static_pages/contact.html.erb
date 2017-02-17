@@ -1,12 +1,37 @@
 <header>
-  <h1>Contact Page</h1>
+  <h1>Let's talk!</h1>
 </header>
-<div class="address">
-  <p>Address: Kopfstr. 47 Berlin, Germany 12053</p>
-</div>
-<div class="contacts">
-  <ul>
-    <li><span class="glyphicon glyphicon-phone"></span> +4915236611607</li>
-    <li><span class="glyphicon glyphicon-envelope"></span> alberto.chiorboli@gmail.com</li>
-  </ul>
+<div class="row">
+  <div class="col-md-6">
+    <div class="address">
+      <p>Address: Kopfstr. 47 Berlin, Germany 12053</p>
+    </div>
+    <div class="contacts">
+      <ul>
+        <li><span class="glyphicon glyphicon-phone"></span> +4915236611607</li>
+        <li><span class="glyphicon glyphicon-envelope"></span> alberto.chiorboli@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <%= flash[:notice] %>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= label_tag :name %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>
+    <%= submit_tag "Send" %>
+  </div>
+  <% end %>
+
 </div>
