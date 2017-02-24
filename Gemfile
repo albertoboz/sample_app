@@ -58,5 +58,8 @@ group :production do
   gem 'pg'
 end
 
-# Installing Devise for user authentication 
+# Installing Devise for user authentication
 gem 'devise'
+
+# Installing CanCanCan for user authorization
+gem 'cancancan', '~> 1.10'

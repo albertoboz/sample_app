@@ -24,7 +24,16 @@ html, body {
   transition: color, background-color 600ms;
   -webkit-transition: color, background-color 600ms;
 }
-
+.btn-user {
+  background: #F5C049;
+  padding: 15px;
+  font-size: 13px;
+  color: #777;
+}
+.btn-user a:hover{
+  text-decoration: none;
+  background-color: #F5C049 !important;  
+}
 // FOOTER
 .page-wrap {
   min-height: 100%;
@@ -175,24 +184,7 @@ header {
   padding-bottom: 40px;
 }
 
-.notice {
-  color: #FFF;
-  text-align: center;
-  height: 40px;
-  width: 100%;
-  background-color: green;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 1.1em;
-}
-
 .alert {
-  color: #FFF;
   text-align: center;
-  height: 40px;
-  width: 100%;
-  background-color: red;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }

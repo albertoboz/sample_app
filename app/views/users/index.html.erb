@@ -1,29 +1,18 @@
-<p id="notice"><%= notice %></p>
+<h3>Hello <%= current_user.first_name %> here you can edit your profile</h3>
 
-<h1>Users</h1>
+  <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="display-product">
+      <div class="product-description">
+        <p class="product-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      </div>
+      <div class="product-links">
+        <span><%= link_to 'Show', current_user %></span>
+        <span><%= link_to 'Edit', edit_user_path(current_user) %></span>
+        <span><%= link_to 'Delete', current_user, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      </div>
+    </div>
+  </div> <!-- /col -->
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<!-- <%= link_to 'New User', new_user_path %> -->
