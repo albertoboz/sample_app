@@ -24,10 +24,15 @@
         <%= @product.price %> &euro;
       </p>
       <p>
-        <%= @product.highest_rating_comment %>
+
+        <strong>Highest Rating:</strong> <%= @product.highest_rating_comment.rating %>
+        </br>
+        <strong>Comment:</strong> <%= @product.highest_rating_comment.body %>
       </p>
       <p>
-        <%= @product.lowest_rating_comment %>
+        <strong>Lowest Rating:</strong> <%= @product.lowest_rating_comment.rating %>
+        </br>
+        <strong>Comment:</strong> <%= @product.lowest_rating_comment.body %>
       </p>
       <div class="show-product-link">
         <%= link_to ' Back', products_path, class: 'glyphicon glyphicon-arrow-left btn btn-primary', role: 'button'%>
