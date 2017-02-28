@@ -167,3 +167,23 @@
   border-radius: 5px;
   padding: 30px;
 }
+.description {
+  top:10px;
+  padding: 20px;
+  background-color: #FFF;
+  max-height: 300px;
+  border-radius: 5px;
+}
+.show-product-link .btn-primary{
+  color: #FFF;
+  font-size: 1.1em;
+}
+.show-product-link a:hover {
+  font-size: 1.1em;
+}
+.show-product-price {
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #21B573;
+}

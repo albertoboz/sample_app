@@ -1,31 +1,44 @@
-<div class="show">
-  <div class="display-product">
-    <p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
       <%= image_tag(@product.image_url, class: "img-responsive product-img") %>
-    </p>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 description">
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
 
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-
-    <p class="product-price">
-      <strong>Price:</strong>
-      <%= @product.price %> &euro;
-    </p>
+      <p class="show-product-price">
+        <strong>Price:</strong>
+        <%= @product.price %> &euro;
+      </p>
+      <p>
+        <%= @product.highest_rating_comment %>
+      </p>
+      <p>
+        <%= @product.lowest_rating_comment %>
+      </p>
+      <div class="show-product-link">
+        <%= link_to ' Back', products_path, class: 'glyphicon glyphicon-arrow-left btn btn-primary', role: 'button'%>
+        <%= link_to ' Edit', edit_product_path(@product), class: 'glyphicon glyphicon-edit btn btn-primary', role: 'button' %>
+      </div>
+    </div>
   </div>
-  <div class="product-links">
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 comments">
+      <h3>Reviews</h3>
+    </div>
   </div>
 </div>
