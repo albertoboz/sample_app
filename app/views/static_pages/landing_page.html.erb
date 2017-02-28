@@ -7,10 +7,10 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner custom-carousel" role="listbox">
     <% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">
-      <%= image_tag(product.image_url, class: "d-block img-fluid") %>
+      <%= image_tag(product.image_url, class: "d-block custom-carousel-img") %>
       <div class="carousel-caption">
         <p class="product-carousel-name"><%= product.name %></p>
       </div>
