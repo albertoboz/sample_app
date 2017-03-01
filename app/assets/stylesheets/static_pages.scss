@@ -29,6 +29,7 @@ html, body {
   padding: 15px;
   font-size: 13px;
   color: #777;
+  border: none;
 }
 .btn-user a:hover{
   text-decoration: none;
@@ -45,14 +46,14 @@ html, body {
   display: block;
 }
 .site-footer, .page-wrap:after {
-  height: 40px;
+  height: 60px;
 }
 .site-footer {
   background: #F5C049;
 }
 .site-footer p {
   float: right;
-  padding: 10px;
+  padding: 20px;
 }
 .push {
   height: 40px;
