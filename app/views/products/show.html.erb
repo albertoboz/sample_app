@@ -24,12 +24,12 @@
         <%= @product.price %> &euro;
       </p>
       <p>
-        <strong>Highest Rating:</strong> <%= @product.highest_rating_comment.try(:rating) %>
+        <div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div>
         </br>
         <strong>Comment:</strong> <%= @product.highest_rating_comment.try(:body) %>
       </p>
       <p>
-        <strong>Lowest Rating:</strong> <%= @product.lowest_rating_comment.try(:rating) %>
+        <div class="rated" data-score="<%= @product.lowest_rating_comment.try(:rating) %>"></div>
         </br>
         <strong>Comment:</strong> <%= @product.lowest_rating_comment.try(:body) %>
       </p>
@@ -39,10 +39,15 @@
       </div>
     </div>
   </div>
-  <hr>
+  
   <div class="row">
+    <% if signed_in? %>
     <div class="col-xs-12 col-sm-6 col-md-6 comments">
-      <h3>Comments</h3>
+      <%= render partial: "new_comment", locals: {comment: @comment} %>
+    </div>
+    <% end %>
+    <div class="col-xs-12 col-sm-6 col-md-6 comments">
+      <%= render partial: "comments", locals: {comment: @comment} %>
     </div>
   </div>
 </div>

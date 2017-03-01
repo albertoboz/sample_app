@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   get 'static_pages/thank_you'
 
-  resources :products
+  resources :products do
+    resources :comments
+  end
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
