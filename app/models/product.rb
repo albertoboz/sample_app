@@ -1,6 +1,9 @@
 class Product < ApplicationRecord
   has_many :orders
   has_many :comments
+
+  validates :name, presence: true
+  validates :description, presence: true
   # search for a word similar to user input
   # check if production or development env.
   def self.search(search_term)
