@@ -46,6 +46,12 @@
     <% end %>
     <div class="col-xs-12 col-sm-6 col-md-6 comments">
       <%= render partial: "comments", locals: {comment: @comment} %>
+      <div class="apple_pagination">
+          <div class="apple_pagination page_entries">
+            <%= page_entries_info @comments %>
+          </div>
+          <%= will_paginate @comments, :container => false %>
+      </div>
     </div>
   </div>
 </div>

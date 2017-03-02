@@ -63,3 +63,6 @@ gem 'devise'
 
 # Installing CanCanCan for user authorization
 gem 'cancancan', '~> 1.10'
+
+# Intalling will_paginate
+gem 'will_paginate', '~> 3.1.0'
