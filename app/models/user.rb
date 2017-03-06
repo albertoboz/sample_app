@@ -10,4 +10,9 @@ class User < ApplicationRecord
   def send_admin_mail
     UserMailer.send_enabled_message(self).deliver
   end
+
+  after_create :send_reset_password
+  def reset_password_instructions
+    UserMailer.reset_password_instructions(self).deliver
+  end
 end
