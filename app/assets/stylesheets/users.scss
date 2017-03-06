@@ -83,3 +83,17 @@
   margin: 0;
   margin-top: 10px;
 }
+.display-user {
+  float: none;
+  margin: auto;
+}
+.back-link {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.back-link a:hover{
+  text-decoration: none;
+  background: none;
+  color: #000;
+}

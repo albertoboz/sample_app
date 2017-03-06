@@ -1,12 +1,12 @@
-<header>
-  <h1>Editing Product</h1>
-</header>
-<div class="row">
-  <div id="product-form">
-    <%= render 'form', product: @product %>
+  <header>
+    <h1>Editing Product</h1>
+  </header>
+  <div class="row">
+    <div id="product-form">
+      <%= render 'form', product: @product %>
+    </div>
   </div>
-</div>
-<div class="product-links">
-  <%= link_to 'Show', @product %> |
-  <%= link_to 'Back', products_path %>
-</div>
+  <div class="product-links">
+    <%= link_to 'Show', @product %> |
+    <%= link_to 'Back', products_path %>
+  </div>

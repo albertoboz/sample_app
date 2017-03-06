@@ -10,18 +10,21 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-xs-10 col-sm-3 col-md-3 login-form">
+      <div class="field login-field">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
 
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
+      <div class="field login-field">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
 
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+      <div class="actions login-actions">
+        <%= f.submit %>
+      </div>
+    </div>
   </div>
 <% end %>
