@@ -66,3 +66,8 @@ gem 'cancancan', '~> 1.10'
 
 # Intalling will_paginate
 gem 'will_paginate', '~> 3.1.0'
+
+# Installing rspec-rails for testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
