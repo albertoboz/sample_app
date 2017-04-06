@@ -6,9 +6,9 @@ class User < ApplicationRecord
   has_many :orders
   has_many :comments
 
-  after_create :send_admin_mail
-  def send_admin_mail
-    UserMailer.send_welcome_message(self).deliver
+  after_create :send_welcome_message
+  def send_welcome_message
+    UserMailer.welcome_message(self).deliver
   end
 
 end
