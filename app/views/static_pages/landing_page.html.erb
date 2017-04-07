@@ -12,8 +12,6 @@
     <div class="item<%= " active" if product == @products.first %>">
       <% if product.image_url.present? %>
         <%= image_tag(product.image_url, class: "d-block custom-carousel-img") %>
-      <% else %>
-        <%= image_tag("https://pixabay.com/photo-1898936/", class: "d-block custom-carousel-img") %>
       <% end %>
       <div class="carousel-caption">
         <p class="product-carousel-name"><%= product.name %></p>
