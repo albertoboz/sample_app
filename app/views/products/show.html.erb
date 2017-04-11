@@ -30,6 +30,12 @@
         </br>
         <strong>Comment:</strong> <%= @product.highest_rating_comment.try(:body) %>
       </p>
+      <div>
+        <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </div>
+    </br>
       <div class="show-product-link">
         <%= link_to ' Back', products_path, class: 'glyphicon glyphicon-arrow-left btn btn-primary', role: 'button'%>
         <% if signed_in? && current_user.admin? %>
