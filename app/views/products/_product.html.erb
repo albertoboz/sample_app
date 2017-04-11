@@ -1,6 +1,8 @@
 <div class="col-xs-12 col-sm-6 col-md-3">
   <div class="display-product">
-    <%= link_to  image_tag(product.image_url, class: "img-responsive product-img"), product %>
+    <% if product.image_url.present? %>
+      <%= link_to  image_tag(product.image_url, class: "img-responsive product-img"), product %>
+    <% end %>
     <div class="product-description">
       <p class="product-name"><%= product.name %></p>
       <p>Description: <%= product.description %></p>
