@@ -12,7 +12,7 @@ class PaymentsController < ApplicationController
         :description => params[:stripeEmail]
       )
       if charge.paid
-        Order.create()
+        Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
       end
     rescue Stripe::CardError => e
       # The card has been declined
