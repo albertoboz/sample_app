@@ -77,3 +77,7 @@ end
 gem 'rails-controller-testing'
 
 gem 'stripe'
+
+group :development do
+  gem 'brakeman', :require => false
+end
