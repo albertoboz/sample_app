@@ -1,5 +1,6 @@
 <div class="col-xs-12 col-sm-6 col-md-3">
   <div class="display-product">
+  <% cache product do %>
     <% if product.image_url.present? %>
       <%= link_to  image_tag(product.image_url, class: "img-responsive product-img"), product %>
     <% end %>
@@ -10,6 +11,7 @@
     </div>
     <hr class="divider">
     <p class="product-price">Price: <%= product.price %> &euro;</p>
+  <% end %>
     <div class="product-links">
       <span><%= link_to 'Show', product %></span>
       <% if signed_in? && current_user.admin? %>

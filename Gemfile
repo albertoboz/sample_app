@@ -81,3 +81,5 @@ gem 'stripe'
 group :development do
   gem 'brakeman', :require => false
 end
+
+gem 'dalli'
