@@ -83,3 +83,5 @@ group :development do
 end
 
 gem 'dalli'
+
+gem 'redis-rails'
