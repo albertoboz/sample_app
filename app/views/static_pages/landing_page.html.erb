@@ -1,6 +1,7 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
+  <% cache @product do %>
     <% @products.each_with_index do |product, i| %>
       <li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="<%= " active" if product == @products.first %>"></li>
     <% end %>
@@ -18,6 +19,7 @@
       </div>
     </div>
     <% end %>
+  <% end %>
   </div>
 
   <!-- Controls -->
