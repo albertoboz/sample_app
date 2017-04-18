@@ -7,7 +7,7 @@ html, body {
 
 // NAV BAR
 .navbar-style {
-  background-color: #F5C049;
+  background-color: #e5ddcc;
 }
 .navbar-header .navbar-brand {
   color: #444;
@@ -25,7 +25,7 @@ html, body {
   -webkit-transition: color, background-color 600ms;
 }
 .btn-user {
-  background: #F5C049;
+  background: #e5ddcc;
   padding: 15px;
   font-size: 13px;
   color: #777;
@@ -33,7 +33,9 @@ html, body {
 }
 .btn-user a:hover{
   text-decoration: none;
-  background-color: #F5C049 !important;
+  background-color: #e5ddcc !important;
+  color: #5E5E5E;
+  font-weight: bold;
 }
 // FOOTER
 .page-wrap {
@@ -49,7 +51,7 @@ html, body {
   height: 60px;
 }
 .site-footer {
-  background: #F5C049;
+  background: #e5ddcc;
 }
 .site-footer p {
   float: right;
