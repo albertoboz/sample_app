@@ -21,4 +21,8 @@ $(document).on('turbolinks:load ajaxSuccess', function(){
     zoomWindowFadeOut: 750,
     scrollZoom : true
   });
+
+  $(function() {
+    $('.alert').delay(3000).fadeOut();
+  });
 });

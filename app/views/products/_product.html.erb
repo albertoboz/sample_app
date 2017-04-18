@@ -11,13 +11,14 @@
     </div>
     <hr class="divider">
     <p class="product-price">Price: <%= product.price %> &euro;</p>
-  <% end %>
+
     <div class="product-links">
       <span><%= link_to 'Show', product %></span>
       <% if signed_in? && current_user.admin? %>
         <span><%= link_to 'Edit', edit_product_path(product) %></span>
         <span><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
       <% end %>
+    <% end %>
     </div>
   </div>
 </div> <!-- /col -->
