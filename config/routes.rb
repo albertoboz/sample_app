@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   post 'payments/create'
 
+  mount ActionCable.server => '/cable'
+
   resources :orders, only: [:index, :show, :create, :destroy]
 
 end

@@ -50,6 +50,7 @@
   </div>
 
   <div class="row">
+    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
     <% if signed_in? %>
     <div class="col-xs-12 col-sm-5 col-md-5 comments">
       <%= render partial: "new_comment", locals: {comment: @comment} %>
