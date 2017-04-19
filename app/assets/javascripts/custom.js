@@ -19,7 +19,8 @@ $(document).on('turbolinks:load ajaxSuccess', function(){
     zoomWindowHeight:300,
     zoomWindowFadeIn: 500,
     zoomWindowFadeOut: 750,
-    scrollZoom : true
+    scrollZoom: true,
+    zoomLevel: 4
   });
 
   $(function() {
