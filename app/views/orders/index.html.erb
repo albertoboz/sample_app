@@ -3,4 +3,30 @@
 and price -->
 <!-- personal information (customer name or ID),
 the products ordered (name, ID, price), and the total amount -->
-<h3><%= current_user.first_name %> this is your order page</h3> 
+<header>
+<h3><%= current_user.first_name %> this is your order page</h3>
+</header>
+
+<div class="row">
+<% @orders.each do |order| %>
+<div class="col-xs-12 col-sm-6 col-md-3">
+  <div class="display-product">
+    <% if order.product.image_url.present? %>
+      <%= link_to  image_tag(order.product.image_url, class: "img-responsive product-img"), order.product %>
+    <% end %>
+    <div class="product-description">
+      <p class="product-name"><%= order.product.name %></p>
+      <p>Description: <%= order.product.description %></p>
+    </div>
+    <hr class="divider">
+    <p class="product-price">Price: <%= order.total %> &euro;</p>
+  </div>
+</div>
+<% end %>
+</div>
+<div class="apple_pagination">
+    <div class="apple_pagination page_entries">
+      <%= page_entries_info @orders %>
+    </div>
+    <%= will_paginate @orders, :container => false %>
+</div>
