@@ -4,29 +4,36 @@ and price -->
 <!-- personal information (customer name or ID),
 the products ordered (name, ID, price), and the total amount -->
 <header>
-<h3><%= current_user.first_name %> this is your order page</h3>
+<h3> <%= current_user.first_name %> this is your order page</h3>
 </header>
 
 <div class="row">
-<% @orders.each do |order| %>
-<div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="display-product">
-    <% if order.product.image_url.present? %>
-      <%= link_to  image_tag(order.product.image_url, class: "img-responsive product-img"), order.product %>
+  <table class="order-table">
+    <tbody>
+      <tr>
+        <td><p> DATE </p></td>
+        <td><p> PRODUCT </p></td>
+        <td><p> PRICE </p></td>
+        <td><p> PURCHASER </p></td>
+      </tr>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><p> <%= order.created_at %>  </p></td>
+        <td><p> <%= order.product.name %></p></td>
+        <td><p> <%= order.total %> &euro;</p></td>
+        <td><p> <%= order.user.first_name %> <%= order.user.last_name %> </p></td>
+      </tr>
     <% end %>
-    <div class="product-description">
-      <p class="product-name"><%= order.product.name %></p>
-      <p>Description: <%= order.product.description %></p>
+    </tbody>
+   </table>
+</div>
+<div class="row">
+  <div class="orders-pagination">
+    <div class="apple_pagination">
+        <div class="apple_pagination page_entries">
+          <%= page_entries_info @orders %>
+        </div>
+        <%= will_paginate @orders, :container => false %>
     </div>
-    <hr class="divider">
-    <p class="product-price">Price: <%= order.total %> &euro;</p>
   </div>
-</div>
-<% end %>
-</div>
-<div class="apple_pagination">
-    <div class="apple_pagination page_entries">
-      <%= page_entries_info @orders %>
-    </div>
-    <%= will_paginate @orders, :container => false %>
 </div>

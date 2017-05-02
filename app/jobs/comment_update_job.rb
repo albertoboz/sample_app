@@ -6,7 +6,6 @@ class CommentUpdateJob < ApplicationJob
     ProductChannel.broadcast_to(comment.product_id,
       comment: render_comment(comment, current_user),
       average_rating: comment.product.average_rating,
-      highest_rating_comment: comment.highest_rating,
       page_entries_info: render_page_entries(comment.product.comments))
   end
 
